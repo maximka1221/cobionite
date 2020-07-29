@@ -2,16 +2,20 @@ package ml.maximka.cobionite;
 
 import ml.maximka.cobionite.blocks.BlockRegister;
 import ml.maximka.cobionite.items.ItemRegister;
+import ml.maximka.cobionite.world.gen.OreGen;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("cobionite")
+@Mod.EventBusSubscriber(modid = Cobionite.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Cobionite {
     public static final String MOD_ID = "cobionite";
     private static final Logger LOGGER = LogManager.getLogger();
@@ -44,5 +48,10 @@ public class Cobionite {
 
     public static Cobionite getInstance() {
         return instance;
+    }
+
+    @SubscribeEvent
+    public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
+        OreGen.generateOre();
     }
 }
