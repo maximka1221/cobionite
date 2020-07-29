@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cobionite:blocks/cobionite_ore"
+  }
+}

@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+[[mods]]
+    modId="cobionite"
+    version="0.0.1"
+    displayName="Cobionite"
+    #updateJSONURL="http://myurl.me/"
+    #displayURL="http://example.com/"
+    #logoFile="cobionite.png"
+    authors="maximka1221"
+    description='''Cobionite'''

@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cobionite:items/cobionite_flame",
+    "layer1": "cobionite:items/cobionite"
+  }
+}
