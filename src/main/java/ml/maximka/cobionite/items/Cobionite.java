@@ -15,7 +15,7 @@ public class Cobionite extends BasicItem {
 
     public Cobionite() {
         super();
-        this.fireChance = 4;
+        this.fireChance = 5;
     }
 
     @Override
