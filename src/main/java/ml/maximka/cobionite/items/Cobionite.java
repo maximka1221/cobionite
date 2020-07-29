@@ -41,4 +41,9 @@ public class Cobionite extends BasicItem {
 
         return ActionResult.func_226248_a_(itemstack);
     }
+
+    @Override
+    public int getBurnTime(ItemStack itemStack) {
+        return 3200;
+    }
 }
