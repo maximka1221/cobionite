@@ -11,11 +11,15 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 
 public class Cobionite extends BasicItem {
+    protected float damage;
     protected int fireChance;
+    protected int fireDuration;
 
     public Cobionite() {
         super();
-        this.fireChance = 4;
+        this.damage = 4;
+        this.fireChance = 5;
+        this.fireDuration = 2;
     }
 
     @Override
@@ -24,7 +28,7 @@ public class Cobionite extends BasicItem {
         world.playSound(null, player.func_226277_ct_(), player.func_226278_cu_(), player.func_226281_cx_(),
                 SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
         if (!world.isRemote) {
-            CobioniteEntity cobioniteEntity = new CobioniteEntity(world, player, this.fireChance);
+            CobioniteEntity cobioniteEntity = new CobioniteEntity(world, player, this.damage, this.fireChance, this.fireDuration);
             cobioniteEntity.setItem(itemstack);
             cobioniteEntity.shoot(player, player.rotationPitch, player.rotationYaw, 0.0F, 1.5F, 1.0F);
             world.addEntity(cobioniteEntity);
