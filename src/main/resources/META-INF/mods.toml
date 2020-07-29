@@ -2,7 +2,7 @@ modLoader="javafml"
 loaderVersion="[28,)"
 [[mods]]
     modId="cobionite"
-    version="0.0.1"
+    version="0.0.2"
     displayName="Cobionite"
     #updateJSONURL="http://myurl.me/"
     #displayURL="http://example.com/"
