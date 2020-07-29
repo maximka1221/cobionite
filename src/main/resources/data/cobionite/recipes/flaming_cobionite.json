@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "cfc",
+    "ccc"
+  ],
+  "key": {
+    "c": {
+      "item": "cobionite:cobionite"
+    },
+    "f": {
+      "item": "minecraft:flint_and_steel"
+    }
+  },
+  "result": {
+    "item": "cobionite:flaming_cobionite"
+  }
+}
